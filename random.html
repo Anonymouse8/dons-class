@@ -1,0 +1,18 @@
+<script>
+var i=0
+do {
+var D1=Math.floor((Math.random() * 6)+1);
+var D2=Math.floor((Math.random() * 6)+1);
+i++;
+
+if (D1==1 && D2==1)
+{
+document.write("first die = " + D1 + "</br>");
+document.write("second die = " + D2 + "</br>");
+document.write("snake eyes!!!</br>");
+document.write("total iterations =" +i);
+}
+}
+while (D1!=1 || D2!=1);
+
+</script>

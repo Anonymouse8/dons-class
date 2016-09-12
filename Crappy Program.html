@@ -1,0 +1,41 @@
+<script>
+//var name=prompt("Good Evening, What is your Name?","");
+//var bet=prompt("And how much would you like to bet?","$"),
+//prompt("Thank you. let's play some craps!");
+
+/*function Roll(){
+  Var D1=(Math.floor(Math.random()*6)+1);
+  Var D2=(Math.floor(Math.random()*6)+1);
+  Var Sum = D1+D2;
+}*/
+
+var RoleNum=2;
+//Roll();
+var D1=Math.floor((Math.random()*6)+1);
+var D2=Math.floor((Math.random()*6)+1);
+var Sum=(D1+D2); 
+document.writeln("Come Out Roll is " + D1 + " and " + D2 + ".</br>");
+if (Sum==2||Sum==3||Sum==12)
+  {document.writeln("Sorry, but you Crapped out.");}
+else if (Sum==7||Sum==11)
+  {document.writeln("Congratulations winner, you are a natural");}
+else
+  {
+var Point=Sum;
+  do{
+//    Roll();
+    D1=Math.floor((Math.random()*6)+1);
+    D2=Math.floor((Math.random()*6)+1);
+    Sum = (D1+D2);
+    document.writeln("Roll " + RoleNum + " is " + D1 + " and " + D2 + ".</br>");
+    RoleNum++;
+    }
+  while((Sum!=7)&&(Sum!=Point));
+  if (Sum==Point)
+    {document.writeln("Congrats, you win");}
+  else
+    {document.writeln("Sorry, but you sevened out");}
+  }
+
+
+</script>
